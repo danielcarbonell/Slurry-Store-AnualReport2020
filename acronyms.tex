@@ -1,0 +1,113 @@
+%% COMMANDS
+%%
+%% \acresetall	flushes the ’memory’ of the macro \ac (ie all "used" marks flushed)
+%%
+%% \ac{label}	singular (first time Full Name + (ACRO) and mark as used)
+%% \acp{label}	plural (as \ac but makes short and/or long forms into plurals)
+%%
+%% \acs{lable}	short (ACRO)
+%% \acf{lable}	“full acronym” (Full Name + (ACRO))
+%% \acl{lable}	long (_without_ ACRO)
+%%
+%% \acsp{label}	short plural (ACROs)
+%% \acfp{label}	“full acronym” plural (Full Names + (ACROs))
+%% \aclp{label}	long plural (_without_ ACRO)
+%%
+%% \acrodef{label}[acronym]{written out form}	definition
+%%		for example \acrodef{etacar}[$\eta$ Car]{Eta Carinae},
+%%		with the restriction that the label should be simple ASCII
+
+
+%% PACKAGE & OPTIONS
+%% acronym package must be loaded (in the preamble):
+%%    \usepackage[option1,option2,etc.]{acronym}
+%% OPTIONS:
+%%    footnote		The option footnote makes the full name appear as a
+%%			footnote.
+%%    nohyperlinks	If hyperref is loaded, all acronyms will link to their
+%%			glossary entry. With the option nohyperlinks these
+%%			linkscan be suppressed.
+%%    printonlyused	Only list used acronyms
+%%    withpage		In printonlyused-mode show the page number where
+%%			each acronym was first used.
+%%    smaller		Make the acronym appear smaller.
+%%    dua			The option dua stands for “don’t use acronyms”. It
+%%			leads to a redefinition of \ac and \acp, making the
+%%			full name appear all the time and suppressing all
+%%			acronyms but the explicity requested by \acf or \acfp.
+%%    nolist		The option nolist stands for “don’t write the list of
+%%			acronyms”.
+
+
+%% INCLUSION
+%%
+
+\begin{acronym}[OMNeTXX] %width of the longest acronym should be matched here
+
+\section*{List of Acronyms}
+\label{sec:acronyms}
+
+  %\acro{h2o}[$\mathrm{H_2O}$]{water}
+  \acro{ASHP}{Air Source Heat Pump}
+  \acro{CA}{Static contact angle}
+  \acro{CA_{adv}}{Advancing contact angle}
+  \acro{CA_{rec}}{Receding contact angle}
+  \acro{CAH}{Contact angle hysteresis}
+  \acro{COP}{Coefficient Of Performance}
+  \acro{CM}{Capillary mats}
+  \acro{d1}{Coating based on hybrid organic/inorganic sol-gel}
+  \acro{d2}{Coating based on silicon rubber}
+  \acro{DHW}{Domestic Hot Water}
+
+  \acro{FP}{Flat plate}
+  
+  \acro{GWP}{Global Warming Potential}
+  \acro{GSHP}{Ground Source Heat Pump}
+  \acro{ASHP}{Ground Source Heat Pump}
+ \acro{HTF} {Heat Transfer Fluid}
+ \acro{HX} {Heat Exchanger}
+
+  \acro{ice-on-hx}{Ice on Heat Exchanger}
+  \acro{MFH} {Multi Family Home}
+  \acro{m2}{Coating based on fluorochemical modified urethanes}
+  \acro{PP}{PolyPropylene}
+  \acro{PV}{Photovoltaics}
+  \acro{Ra}{Surface roughness}
+
+  \acro{SAHP}{Solar Assisted Heat Pump}
+  \acro{SFH} {Single Family Home}
+  \acro{MFH} {Multy Family Home}
+
+  \acro{SPF}{Seasonal Performance Factor}
+  \acro{SS}{Stainless Steel}
+
+  \acro{SSHP}{Solar Source Heat Pump}
+  \acro{IRF}{Ice reduction factor}
+  
+  \acro{CNT}{Classical nucleation theory}
+  
+  %\acro{ice-on-coil}{Ice built on the surface of coil based heat exchangers}
+  %\acro{ice-on-plates}{Ice built on the surface of plate base heat exchangers}
+
+%\section*{List of Symbols}
+%\label{sec:symbols}
+%\acro{$Q_D$}{Total heating energy demand}
+%%\si{Q_{SH,tFl}}
+%\acro{QShTfl}[$Q_{SH,tFl}$]{Heat flow of Space Heating loop as function of the flow Temperature}
+%\acro{QShTrt}[$Q_{SH,tRt}$]{Heat flow of Space Heating loop as function of the return Temperature}
+% \acro{QD}[$Q_{D}$]{Total Heat demand}
+% \acro{QSH}[$Q_{sh}$]{Space heat demand}
+% \acro{QDHW}[$Q_{dhw}$]{Domestic hot water heat demand} 
+% \acro{Tfl}[$T_{fl}$]{Flow temperature of the heating distribution system} 
+% \acro{Trt}[$T_{rt}$]{Return temperature of the heating distribution system} 
+%\acro{Qcond}[$Q_{cond}$]{Heat provided by the heat pump condenser} 
+%\acro{Qevap}[$Q_{evap}$]{Heat needed by the heat pump evaporator}
+%\acro{Qice}[$Q_{ice}$]{Latent heat extracted from the ice storage}
+%\acro{QColToTes}[$Q_{col\rightarrow tes}$]{Heat provided from solar collectors to the thermal storage tank}
+%\acro{QcolToHp}[$Q_{col\rightarrow hp}$]{Heat provided from solar collectors to the heat pump evaporator}
+%\acro{QcolToIce}[$Q_{col\rightarrow ice}$]{Heat provided from solar collectors to the ice storage}
+
+
+  
+\end{acronym}
+\newpage
