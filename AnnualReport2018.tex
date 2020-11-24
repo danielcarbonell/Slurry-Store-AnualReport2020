@@ -73,7 +73,7 @@ The overall goal of the Slurry-Store project will be to experimentally investiga
 The specific objectives of the project will be:
 \begin{itemize}
     \item Design, built and test an ice slurry storage design able to achieve 50~\% ice slurry fraction
-    \item Develop and test an ice releaser for stable continuous operation of 6 hours
+    \item Develop and test an ice crystalizer for stable continuous ice slurry production of 6 hours
     \item Design, built and test two concepts for loading (icing)
     \item Design, built and test two concepts for unloading (melting)
     \item Develop a mathematical formulation for the ice slurry storage, implement it and validated within TRNSYS.
@@ -81,7 +81,15 @@ The specific objectives of the project will be:
 
 \section{Status and work carried out}
 
-\subsection{Experimental set-up}
+The project has been running since October 2020. In these two months we have carried out two main tasks. The first one is the design and preparation of the experimental set-up that we will use for the experimental work. A summary has been given in section \ref{chapter_exp_setup}. The second task has been to focus on a literature review on ice slurry with spechial emphasis on supercooling method, ice crystalizer and ice slurry storage. A summary of the literaure review is provided in section \ref{chapter_theory}. Both tasks are still ongoing and the presented work should be considered as preliminary steps.
+ 
+
+\section{Experimental set-up for supercooling ice production}
+\label{chapter_exp_setup}
+
+
+\noindent
+ The goal of the described installation is to continuously produce ice slurry with an ice content of roughly 2~\% of the mass flow at the tank inlet. Our goal is to achieve an ice fraction of 50~\% in the tank itself. Its design is based on the setup of a previous project, in which the supercooling capability of a coated flat plate heat exchanger was tested. The setup is schematically shown in Fig.~\ref{fig:exp_setup}. It consists of two separate piping loops: i) a loop with demineralized water (right) and ii) a glycol-water mixture loop with 30~\% glycol content (left). The two loops are connected via a plate heat exchanger that acts as the supercooler. Both loops are designed from 1" plastic pipes and a flow from \SIrange{200}{2000}{l/h}.
 
 \begin{figure}[!htbp]
     \centering
@@ -89,20 +97,16 @@ The specific objectives of the project will be:
     %\includegraphics[trim={0 0 0 0},clip,width=0.8\textwidth]{figures/}
     \includegraphics[trim={0 0 0 0},clip,width=\textwidth]{figures/SetUp_v01.pdf}
     \caption{Piping \& Instrumentation Diagram of the planned set up.}
-   \label{fig:setup}
+   \label{fig:exp_setup}
 \end{figure}
 
-\noindent
- The goal of the described installation is to continuously produce an ice  slurry with an ice content of roughly 2~\% at the tank inlet, and up to 50\% of ice in the tank itself. Its design is based on the setup of a previous project, in which the supercooling capability of a coated double tube heat exchanger was tested. The setup consists of two separate piping loops: A water loop with demineralized water and a glycol-water loop with 30\% glycol as refrigerant. The two loops are connected via a plate heat exchanger that acts as supercooler of the water. Both loops are designed from 1" plastic pipes and a flow of \SIrange{200}{2000}{l/h}.
+On the water circuit, the water is pumped from the ice storage and heated up to \SI{0.5}{\celsius} to ensure that no ice particles are pumped to the supercooler. The fluid is pumped using a radial pump "P\_W" (Grundfos CME). After passing a static mixer that ensures the flow is well mixed, the mass of the flow is measured using a Coriolis mass flow meter (DN15, E+H, Promass E300, "FI-W"). It then passes a filter with \SI{0.5}{mm} mesh size (+GF+ Strainer Type 305) to remove possible solid particles before it reaches the supercooler. In this welded plate type heat exchanger (Alfa Laval), the water is cooled down to temperatures between \SIrange{0}{-2}{\celsius}, where icephobic coated surfaces are expected to delay the formation of ice. Directly after the supercooler, the supercooled water will be crystallized in the custom made device. Parts of the water are cooled electrically using peltier modules to promote crystallization. This step is crucial to prevent formation of ice in unwanted places, where the ice could block the pipe. Since ice is reported to propagate upstream along the pipe walls  \citep{mito_new_2002}, heat tracing will be used to locally increase the pipe walls above the freezing temperature. At the location of the crystallizer, the pipe diameter is increased to \si{3}{"} to reduce the flow velocity and balance the velocities of the ice front formation and the supercooled water flow. After the crystallizer, an ice slurry mixture with around 2~\% ice content will flow to the tank. Between the crystallizer and the tank, a tree way valve is placed. With this valve, a melting program can be used where warm water is sprayed from the top onto floating ice inside the tank. Two different option of introducing the slurries into the storage as  well as two options of melting the ice will be considered and experimentally evaluated.
 
 
-In the \textbf{Water-loop}. starting at the water/ice tank, the water is heated up to \SI{0.5}{\celsius} to ensure that no leftover ice particles from the tank can be found within the stream. The fluid is then pumped through the water loop using a radial pump "P\_W" (Grundfos CME). After passing a static mixer that ensures homogeneousity of the temperature in the flow, the mass of the flow is measured using a Coriolis mass flow meter (DN15, E+H, Promass E300, "FI-W"). It then passes a filter with \SI{0.5}{mm} mesh size (+GF+ Strainer Type 305) to remove possible solid particles before it reaches the supercooler. In this welded plate type heat exchanger (AlfaLaval), the water is cooled down to temperatures between \SIrange{0}{-2}{\celsius}, where coated supercooler walls are expected to prevent formation of ice. Directly after the supercooler, the supercooled water is crystallized in the custom made crystallizing pipe section. Parts of the water are cooled electrically using peltier modules to promote crystallization. This step is crucial to prevent formation of ice in unwanted places, where the ice could block the pipe. Since ice is reported to propagate upstream along the pipe walls  \citep{mito_new_2002}, heat tracing is used to locally increase the pipe walls above freezing temperature. At the location of the crystallizer, the pipe diameter is increased to \si{3}{"} to reduce the flow velocity to increase the time for ice to grow. The ice slurry then leaves the crystallizer and is passed on to the tank. Between the crystallizer and the tank, a tree way valve is placed. With this valve, a de-icing programm can be run, where warmed water is sprayed from the top onto floating ice inside the tank.
+The glycol loop is cooled using the chiller IN 1030 T. Its mass flow is achieved with a chiller pump controlled by a MID "FI-G". The temperature is controlled by the chiller using   a PT-100 installed before the heat exchanger. \textcolor{red}{Are you sure? I would assume the setpoint of the chiller is controlled internally with a chiller sensor.}
 
-
-The \textbf{glycole loop} acts as the refrigerant, and is cooled using the heat pump IN 1030 T. Its flow is generated using a pump within the heat pump and controlled by a MID "FI-G". The temperature is controlled using PT-100 within the  heat pump and before and after the heat exchanger.
-
-Temperatures are measured using seven 4-wire PT100 temperature indicators. TI-2 to -5 are used to generate an energy balance calculation across the supercooling plate heat exchanger. TI-5 is also used to control the heat generated by the heater EI-H. TI-H acts as safety instrument to prevent the heater from overheating if it sould run dry. The temperature difference between TI-4 and -5 is used to check proper ice generation. A negative temperature in -4 and a temperature of \SI{0}{\celsius} indicates complete release of superheating. A mismatch in the energy balance and the temperature in TI-4 can also indicate early nucleation inside or shortly after the supercooler. The electric current delivered to the pump  P\_W together with data from FI-W is used to detect blocked pipes, starting a de-icing program. In this program, the allowed heater temperature is raised and the chiller switches from cooling to heating, resulting in increased temperature in the heat exchanger and ultimately in melting of the blocking ice.
-
+Temperatures will be measured using seven 4-wire PT100 temperature sensors. Temperature sensors (TI) from 2 to 5 are used to calculate the energy balance across the supercooling plate heat exchanger. TI-5 is also used to control the heat generated by the electric heater EI-H. The temperature sensor TI-H acts as safety measurement to prevent overheating in case it would run without flow or fluid. The temperature difference between TI-4 and TI-6 is used to check proper ice generation. A negative temperature in TI-4 and a temperature of \SI{0}{\celsius} in TI-6 would indicate a complete release of the  supercooling into latent heat. That is, a perfect ice crystallization process. A mismatch in the energy balance and the measurement in TI-4 will indicate early nucleation inside the supercooler or shortly after the supercooler. The electric current delivered to the pump  P\_W together with data from FI-W is used to detect blocked pipes. Once ice is detected a melting program will be initiated. In this program, the temperature will be increased by the chiller reverting the cycle from cooling to heating.
+\textcolor{red}{will the water pump  be switched off to avoid overheated the complete ice storage? or it will by pass it}. This will melt the ice formed on the heat exchanger.
 
 
 \input{section_theory.tex}
@@ -120,6 +124,8 @@ No publications are available yet
 
 During the short time period of three months since beginning, the project is running as expected. 
 The laboratory set-up is being designed, pieces have been ordered and it will be constructed by beginning next year. A literature review of supercooling and ice slurry storage concepts has been conducted.
+
+During 2021 the experimental setup to produce ice slurries will be finished including the design and construction of the ice crystallizer. Next autumn first experiments of ice slurry storage are foreseen.
 
 %BIBLIOGRAPHY
 
