@@ -13,6 +13,7 @@
 %\usepackage{epsfig}               % grafics eps
 \usepackage{babel}
 \usepackage[latin1,utf8x]{inputenc}
+%\usepackage[utf8]{inputenc} for german
 \usepackage{psfrag}               % per modificar text de gràfics
 %\usepackage{amsmath}
 \usepackage{float}
